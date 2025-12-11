@@ -3,12 +3,10 @@
     "internal": {
       "distribution": "internal",
       "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleDebug"
+        "buildType": "apk"
       },
-      "env": {
-        "API_URL": "https://dev.example.com",
-        "APP_ENV": "development"
+      "cli": {
+        "installCommand": "pnpm install --no-frozen-lockfile"
       }
     }
   }
