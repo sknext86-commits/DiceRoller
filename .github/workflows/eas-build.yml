@@ -1,0 +1,21 @@
+name: EAS Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: expo/expo-github-action@v6
+        with:
+          expo-version: latest
+
+      - run: eas build --platform android --profile internal --non-interactive
+        env:
+          EAS_SKIP_FROZEN_LOCKFILE: true
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
