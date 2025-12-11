@@ -12,7 +12,7 @@
         "APP_ENV": "development",
         "API_URL": "https://dev.example.com"
       },
-      "cli": {
+      "node": {
         "installCommand": "pnpm install --no-frozen-lockfile"
       }
     }
