@@ -3,18 +3,17 @@
     "version": ">= 3.12.0"
   },
   "build": {
-    "internal": {
+    "fastDebug": {
       "distribution": "internal",
       "android": {
-        "buildType": "apk"
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug"
       },
       "env": {
         "APP_ENV": "development",
         "API_URL": "https://dev.example.com"
       },
-      "node": {
-        "installCommand": "pnpm install --no-frozen-lockfile"
-      }
+      "preInstall": "pnpm install --no-frozen-lockfile"
     }
   }
 }
