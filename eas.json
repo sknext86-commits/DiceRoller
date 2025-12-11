@@ -5,6 +5,10 @@
       "android": {
         "buildType": "apk",
         "gradleCommand": ":app:assembleDebug"
+      },
+      "env": {
+        "API_URL": "https://dev.example.com",
+        "APP_ENV": "development"
       }
     }
   }
